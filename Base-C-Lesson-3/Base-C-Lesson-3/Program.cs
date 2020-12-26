@@ -13,7 +13,13 @@ namespace Base_C_Lesson_3
         {
 
             // Задача 1.
-            Task2();
+            //Task1();
+
+            // Задача 2
+            //Task2();
+
+            // Задача 3
+            Task3();
         }
 
         // Задача 1.
@@ -126,10 +132,29 @@ namespace Base_C_Lesson_3
             Console.Write(description);
             Console.Write("------------------------------------------------------\n");
 
-          
+            // Задаем дроби
+            try { 
+                Fractional d = new Fractional(1, 0.5); //  == 1 / 2
+                Fractional d2 = new Fractional(3, 4); //  == 3 / 4
+                
+                // Операции...
+                Fractional plus = d.Plus(d2);
+                Fractional minus = d.Minus(d2);
+                Fractional multi = d.Multi(d2);
+                Fractional divide = d.Divide(d2);
 
-
-            Console.WriteLine("\nРезультат:");
+                // Показываем
+                Console.WriteLine("\nРезультат:");
+                Console.WriteLine(d.getCondition(d2, "+") + " = " + plus.Ch.ToString() + "/" + plus.Zn.ToString() + " = " + plus.Res);
+                Console.WriteLine(d.getCondition(d2, "-") + " = " + minus.Ch.ToString() + "/" + minus.Zn.ToString() + " = " + minus.Res);
+                Console.WriteLine(d.getCondition(d2, "*") + " = " + multi.Ch.ToString() + "/" + multi.Zn.ToString() + " = " + multi.Res);
+                Console.WriteLine(d.getCondition(d2, "/") + " = " + divide.Ch.ToString() + "/" + divide.Zn.ToString() + " = " + divide.Res);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Исключение: {ex.Message}");
+            }
+            
             Console.ReadKey();
         }
 
