@@ -13,10 +13,10 @@ namespace Base_C_Lesson_3
         {
 
             // Задача 1.
-            //Task1();
+            Task1();
 
             // Задача 2
-            //Task2();
+            Task2();
 
             // Задача 3
             Task3();
@@ -134,7 +134,7 @@ namespace Base_C_Lesson_3
 
             // Задаем дроби
             try { 
-                Fractional d = new Fractional(1, 0.5); //  == 1 / 2
+                Fractional d = new Fractional(1, 2); //  == 1 / 2
                 Fractional d2 = new Fractional(3, 4); //  == 3 / 4
                 
                 // Операции...
